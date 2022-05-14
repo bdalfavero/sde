@@ -5,7 +5,7 @@ program brown
     real :: t, dt
     integer :: i, j, steps
 
-    open(10, file="data.txt")
+    open(10, file="data.csv")
 
     steps = 100
     t = 0.0
