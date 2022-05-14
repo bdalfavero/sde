@@ -14,7 +14,7 @@ program brown
     x = [0.5, 0.5]
 
     do j = 1, steps
-        write(10,*) t, v(1), v(2), x(1), x(2)
+        write(10,'(*(G0.6,:,","))') t, v(1), v(2), x(1), x(2)
 
         ! update position and time
         x = x + dt * v
