@@ -12,6 +12,6 @@ plt.plot(df["t"], df["v"], "--")
 plt.xlabel("t")
 plt.ylabel("y")
 plt.title("Magnitude of velocity vs. time")
-plt.savefig("velcoity.png")
+plt.savefig("velocity.png")
 
 df.to_csv("data.csv", index=False)
