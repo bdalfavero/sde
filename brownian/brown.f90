@@ -6,15 +6,17 @@ program brown
     integer :: i, j, steps
 
     open(10, file="data.csv")
+    open(11, file="input.dat")
 
-    steps = 1000
+    read(11,*) steps
+    read(11,*) dt
+    read(11,*) v(1), v(2)
+    read(11,*) x(1), x(2)
+
     t = 0.0
-    dt = 0.01
-    v = [0.1, 0.1]
-    x = [0.5, 0.5]
 
     ! write a header to the csv file
-    write (10,*)"time,vx,vy,x,y"
+    write(10,*) "time,vx,vy,x,y"
 
     do j = 1, steps
         write(10,'(*(G0.6,:,","))') t, v(1), v(2), x(1), x(2)
@@ -30,5 +32,7 @@ program brown
             end if
         end do 
     end do
+
+    close(10)
 
 end program brown
