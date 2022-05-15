@@ -6,7 +6,7 @@ import pandas as pd
 
 df = pd.read_csv("data.csv")
 
-df["v"] = df["vx"] ** 2 + df["vy"] ** 2
+df["v"] = np.sqrt(df["vx"] ** 2 + df["vy"] ** 2)
 
 plt.plot(df["t"], df["v"], "--")
 plt.xlabel("t")
