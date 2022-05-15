@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("data.csv")
+
+plt.plot(df["x"], df["y"], '-')
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("Particle position")
+plt.savefig("position.png")
