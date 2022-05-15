@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+df = pd.read_csv("data.csv")
+
+df["v"] = df["vx"] ** 2 + df["vy"] ** 2
+
+#plt.plot(df["t"], df["v"], "--")
+#plt.xlabel("t")
+#plt.ylabel("y")
+#plt.title("Magnitude of velocity vs. time")
+#plt.savefig("velcoity.png")
+
+df.to_csv("data.csv", index=False)
