@@ -2,5 +2,7 @@ brownian/brown
 brownian/data.csv
 brownian/position.png
 brownian/test.gp
+brownian/.vscode/*
+.vscode/*
 brownian/.vscode
 .vscode
