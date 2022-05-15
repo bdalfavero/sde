@@ -2,13 +2,14 @@ program brown
     implicit none
 
     real, dimension(2) :: v, x
-    real :: t, dt
+    real :: t, dt, lambda
     integer :: i, j, steps
 
     open(10, file="data.csv")
     open(11, file="input.dat")
 
     read(11,*) steps
+    read(11,*) lambda
     read(11,*) dt
     read(11,*) v(1), v(2)
     read(11,*) x(1), x(2)
@@ -23,6 +24,7 @@ program brown
 
         ! update position and time
         x = x + dt * v
+        v = v - dt * lambda * v
         t = t + dt
 
         ! reflect velocity components as needed
