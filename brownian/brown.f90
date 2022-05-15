@@ -7,7 +7,7 @@ program brown
 
     open(10, file="data.csv")
 
-    steps = 100
+    steps = 1000
     t = 0.0
     dt = 0.01
     v = [0.1, 0.1]
@@ -25,7 +25,7 @@ program brown
 
         ! reflect velocity components as needed
         do i = 1, 2
-            if (v(i) >= 1.0 .or. v(i) <= 0.0) then
+            if (x(i) >= 1.0 .or. x(i) <= 0.0) then
                 v(i) = -v(i)
             end if
         end do 
