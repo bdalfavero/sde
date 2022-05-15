@@ -17,7 +17,7 @@ program brown
     t = 0.0
 
     ! write a header to the csv file
-    write(10,*) "time,vx,vy,x,y"
+    write(10,'(a)') "t,vx,vy,x,y"
 
     do j = 1, steps
         write(10,'(*(G0.6,:,","))') t, v(1), v(2), x(1), x(2)
