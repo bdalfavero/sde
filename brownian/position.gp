@@ -1,7 +1,12 @@
 set datafile separator ","
+set key autotitle columnhead
+set terminal png
+
 set title "position vs time"
 set xlabel "time"
 set ylabel "position"
 set grid
-plot "data.csv"
-save "position.png"
+
+plot "data.csv" using 1:5
+
+save "position.png" 
