@@ -3,10 +3,9 @@ set key autotitle columnhead
 set terminal png
 set output "position.png"
 
-set title "position vs time"
-set xlabel "time"
-set ylabel "position"
+set title "Particle trajectory"
+set xlabel "x"
+set ylabel "y"
 set grid
 
-plot "data.csv" using 1:5 
-plot "data.csv" using 1:4
+plot "data.csv" using 4:5 
